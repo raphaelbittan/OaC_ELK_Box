@@ -57,7 +57,7 @@ $ java -jar /opt/injector.jar 100000 1000
 *Create a Dashboard representing Amount of Packages installed per Days in Logstash from [Yum Log](docs/files/yum.log)*
 
 
-* 1 VM with ELK STACK from within Vagrant and orchestrated via Ansible
+* 1 VM with ELK Stack from within Vagrant and orchestrated via Ansible
 
 [Vagrant Log](docs/files/ubuntu-bionic-18.04-cloudimg-console.log)
 
@@ -67,15 +67,15 @@ $ java -jar /opt/injector.jar 100000 1000
 
 * Logstash Index
 
-[Kibana - 127.0.0.1 - Discover - Visible.png](docs/images/Kibana-127.0.0.1-Discover-Visible.png)
+![View Index](docs/images/Kibana-127.0.0.1-Discover-Visible.png)
 
-[Kibana - 127.0.0.1 - Discover - Full.png](docs/images/Kibana-127.0.0.1-Discover-Full.png)
+[Full View](docs/images/Kibana-127.0.0.1-Discover-Full.png)
 
 * Logstash Dashboard
 
-[Kibana - 127.0.0.1 - Visualize - YUM.png](docs/images/Kibana-127.0.0.1-Visualize-YUM.png)
+![Visualize](docs/images/Kibana-127.0.0.1-Visualize-YUM.png)
 
-[Kibana - 127.0.0.1 - Dashboard - YUM.png](docs/images/Kibana-127.0.0.1-Dashboard-YUM.png)
+![Dashboard](docs/images/Kibana-127.0.0.1-Dashboard-YUM.png)
 
 * CSV Export of Visualization
 
