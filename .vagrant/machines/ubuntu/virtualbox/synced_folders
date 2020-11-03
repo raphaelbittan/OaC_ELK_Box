@@ -1,0 +1,1 @@
+{"virtualbox":{"/elastic-stack/":{"guestpath":"/elastic-stack","hostpath":"/home/raphael/Desktop/NICE_test/ELK_STACK_BOX/elastic-stack","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/raphael/Desktop/NICE_test/ELK_STACK_BOX","disabled":false,"__vagrantfile":true}}}

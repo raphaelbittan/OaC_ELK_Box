@@ -1,0 +1,175 @@
+2020-11-03 01:22:12,975 p=19154 u=vagrant |  ERROR! vars file vars.yml was not found on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2020-11-03 01:23:30,483 p=19165 u=vagrant |  PLAY [localhost] ***************************************************************
+2020-11-03 01:23:30,501 p=19165 u=vagrant |  TASK [Gathering Facts] *********************************************************
+2020-11-03 01:23:31,718 p=19165 u=vagrant |  ok: [127.0.0.1]
+2020-11-03 01:23:31,762 p=19165 u=vagrant |  TASK [Create CA certificates] **************************************************
+2020-11-03 01:23:36,217 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:36,266 p=19165 u=vagrant |  TASK [Creates CA directory] ****************************************************
+2020-11-03 01:23:36,630 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:36,656 p=19165 u=vagrant |  TASK [Unzip CA certificates] ***************************************************
+2020-11-03 01:23:37,009 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:37,039 p=19165 u=vagrant |  TASK [Create instance certificates] ********************************************
+2020-11-03 01:23:40,194 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:40,283 p=19165 u=vagrant |  TASK [Creates certificate directory] *******************************************
+2020-11-03 01:23:40,493 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:40,518 p=19165 u=vagrant |  TASK [Unzip instance certificates] *********************************************
+2020-11-03 01:23:40,698 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:40,727 p=19165 u=vagrant |  TASK [Creates configuration ca directory] **************************************
+2020-11-03 01:23:40,902 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:40,930 p=19165 u=vagrant |  TASK [Creates configuration instance directory] ********************************
+2020-11-03 01:23:41,111 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:41,140 p=19165 u=vagrant |  TASK [Creates elastic directory in server ca directory] ************************
+2020-11-03 01:23:41,327 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:41,355 p=19165 u=vagrant |  TASK [Copy CA certificate to server ca directory] ******************************
+2020-11-03 01:23:41,945 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:41,970 p=19165 u=vagrant |  TASK [Update server certificates] **********************************************
+2020-11-03 01:23:44,139 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:44,167 p=19165 u=vagrant |  TASK [Copy CA certificate to elasticsearch directory] **************************
+2020-11-03 01:23:44,472 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:44,497 p=19165 u=vagrant |  TASK [Copy instance certificate to elasticsearch directory] ********************
+2020-11-03 01:23:44,803 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:44,828 p=19165 u=vagrant |  TASK [Copy instance key to elasticsearch directory] ****************************
+2020-11-03 01:23:45,154 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:45,180 p=19165 u=vagrant |  TASK [Change Elasticsearch's minimum memory usage to 512MB] ********************
+2020-11-03 01:23:45,518 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:45,547 p=19165 u=vagrant |  TASK [Change Elasticsearch's maximum memory usage to 512MB] ********************
+2020-11-03 01:23:45,726 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:45,758 p=19165 u=vagrant |  TASK [Do not swap] *************************************************************
+2020-11-03 01:23:45,932 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:45,960 p=19165 u=vagrant |  TASK [We only have a single node, set minimum master nodes accordingly] ********
+2020-11-03 01:23:46,139 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:46,172 p=19165 u=vagrant |  TASK [Require explicit names when deleting indices] ****************************
+2020-11-03 01:23:46,343 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:46,373 p=19165 u=vagrant |  TASK [Disable watermarks, since disk space might be tight on the 10GB base box] ***
+2020-11-03 01:23:46,546 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:46,573 p=19165 u=vagrant |  TASK [Enable monitoring of the Elastic Stack] **********************************
+2020-11-03 01:23:46,752 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:46,777 p=19165 u=vagrant |  TASK [Enable security for the Elastic Stack] ***********************************
+2020-11-03 01:23:46,956 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:46,980 p=19165 u=vagrant |  TASK [Enable SSL for transport within the Elastic Stack] ***********************
+2020-11-03 01:23:47,181 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:47,207 p=19165 u=vagrant |  TASK [Make transport SSL verification mode 'certificate' within the Elastic Stack] ***
+2020-11-03 01:23:47,382 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:47,411 p=19165 u=vagrant |  TASK [Set path to transport ssl key within the Elastic Stack] ******************
+2020-11-03 01:23:47,589 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:47,614 p=19165 u=vagrant |  TASK [Set path to transport ssl certificate within the Elastic Stack] **********
+2020-11-03 01:23:47,799 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:47,829 p=19165 u=vagrant |  TASK [Set path to transport ssl CA certificate within the Elastic Stack] *******
+2020-11-03 01:23:48,010 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:48,034 p=19165 u=vagrant |  TASK [Enable SSL for HTTP for the Elastic Stack] *******************************
+2020-11-03 01:23:48,213 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:48,236 p=19165 u=vagrant |  TASK [Set path to HTTP ssl key within the Elastic Stack] ***********************
+2020-11-03 01:23:48,413 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:48,437 p=19165 u=vagrant |  TASK [Set path to HTTP ssl certificate within the Elastic Stack] ***************
+2020-11-03 01:23:48,639 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:48,668 p=19165 u=vagrant |  TASK [Set path to HTTP ssl CA certificate within the Elastic Stack] ************
+2020-11-03 01:23:48,861 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:48,889 p=19165 u=vagrant |  TASK [Set the right ulimits] ***************************************************
+2020-11-03 01:23:49,078 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:49,103 p=19165 u=vagrant |  TASK [shell] *******************************************************************
+2020-11-03 01:23:49,302 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:49,331 p=19165 u=vagrant |  TASK [Start Elasticsearch] *****************************************************
+2020-11-03 01:23:49,911 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:23:49,943 p=19165 u=vagrant |  TASK [Wait for Elasticsearch to become available] ******************************
+2020-11-03 01:24:10,453 p=19165 u=vagrant |  ok: [127.0.0.1]
+2020-11-03 01:24:10,541 p=19165 u=vagrant |  TASK [Create reserved user passwords] ******************************************
+2020-11-03 01:24:20,406 p=19165 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:24:20,435 p=19165 u=vagrant |  TASK [Active the 30 day X-Pack trial] ******************************************
+2020-11-03 01:24:21,130 p=19165 u=vagrant |  ok: [127.0.0.1]
+2020-11-03 01:24:21,166 p=19165 u=vagrant |  TASK [Wait for trial to register] **********************************************
+2020-11-03 01:24:21,188 p=19165 u=vagrant |  Pausing for 60 seconds
+2020-11-03 01:24:21,189 p=19165 u=vagrant |  (ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+2020-11-03 01:25:21,198 p=19165 u=vagrant |  ok: [127.0.0.1]
+2020-11-03 01:25:21,258 p=19165 u=vagrant |  TASK [Create Logstash Writer role] *********************************************
+2020-11-03 01:25:21,635 p=19165 u=vagrant |  ok: [127.0.0.1]
+2020-11-03 01:25:21,677 p=19165 u=vagrant |  TASK [Create logstash_internal user] *******************************************
+2020-11-03 01:25:22,129 p=19165 u=vagrant |  ok: [127.0.0.1]
+2020-11-03 01:25:22,131 p=19165 u=vagrant |  PLAY RECAP *********************************************************************
+2020-11-03 01:25:22,132 p=19165 u=vagrant |  127.0.0.1                  : ok=41   changed=35   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 01:25:24,251 p=21765 u=vagrant |  PLAY [localhost] ***************************************************************
+2020-11-03 01:25:24,324 p=21765 u=vagrant |  TASK [Gathering Facts] *********************************************************
+2020-11-03 01:25:25,574 p=21765 u=vagrant |  ok: [127.0.0.1]
+2020-11-03 01:25:25,609 p=21765 u=vagrant |  TASK [Make Kibana available on all network interfaces] *************************
+2020-11-03 01:25:25,999 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:26,040 p=21765 u=vagrant |  TASK [Create the Kibana logging directory] *************************************
+2020-11-03 01:25:26,412 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:26,438 p=21765 u=vagrant |  TASK [Enable persistent Kibana logs] *******************************************
+2020-11-03 01:25:26,679 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:26,741 p=21765 u=vagrant |  TASK [Creates configuration ca directory] **************************************
+2020-11-03 01:25:27,078 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:27,141 p=21765 u=vagrant |  TASK [Creates configuration instance directory] ********************************
+2020-11-03 01:25:27,413 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:27,469 p=21765 u=vagrant |  TASK [Copy CA certificate to kibana directory] *********************************
+2020-11-03 01:25:28,254 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:28,299 p=21765 u=vagrant |  TASK [Copy instance certificate to kibana directory] ***************************
+2020-11-03 01:25:28,683 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:28,713 p=21765 u=vagrant |  TASK [Copy instance key to kibana directory] ***********************************
+2020-11-03 01:25:29,042 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:29,070 p=21765 u=vagrant |  TASK [Change Elasticsearch hosts] **********************************************
+2020-11-03 01:25:29,267 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:29,294 p=21765 u=vagrant |  TASK [Set Elasticsearch username] **********************************************
+2020-11-03 01:25:29,476 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:29,505 p=21765 u=vagrant |  TASK [Set Kibana user password] ************************************************
+2020-11-03 01:25:29,694 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:29,719 p=21765 u=vagrant |  TASK [Enable SSL for Kibana server] ********************************************
+2020-11-03 01:25:29,896 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:29,923 p=21765 u=vagrant |  TASK [Set path to instance certificate for server] *****************************
+2020-11-03 01:25:30,115 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:30,165 p=21765 u=vagrant |  TASK [Set path to instance key for server] *************************************
+2020-11-03 01:25:30,384 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:30,414 p=21765 u=vagrant |  TASK [Set path to instance certificate for elasticsearch] **********************
+2020-11-03 01:25:30,600 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:30,627 p=21765 u=vagrant |  TASK [Set path to instance key for elasticsearch] ******************************
+2020-11-03 01:25:30,804 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:30,831 p=21765 u=vagrant |  TASK [Set path to CA] **********************************************************
+2020-11-03 01:25:31,007 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:31,032 p=21765 u=vagrant |  TASK [Set certificate verification mode for elasticsearch] *********************
+2020-11-03 01:25:31,221 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:31,249 p=21765 u=vagrant |  TASK [Start Kibana] ************************************************************
+2020-11-03 01:25:31,898 p=21765 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:25:31,929 p=21765 u=vagrant |  TASK [Wait for Kibana to become available] *************************************
+2020-11-03 01:25:37,397 p=21765 u=vagrant |  ok: [127.0.0.1]
+2020-11-03 01:25:37,432 p=21765 u=vagrant |  TASK [Wait for Kibana to be ready] *********************************************
+2020-11-03 01:25:37,451 p=21765 u=vagrant |  Pausing for 120 seconds
+2020-11-03 01:25:37,452 p=21765 u=vagrant |  (ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+2020-11-03 01:27:37,460 p=21765 u=vagrant |  ok: [127.0.0.1]
+2020-11-03 01:27:37,495 p=21765 u=vagrant |  TASK [Set dark mode] ***********************************************************
+2020-11-03 01:27:39,351 p=21765 u=vagrant |  ok: [127.0.0.1]
+2020-11-03 01:27:39,357 p=21765 u=vagrant |  PLAY RECAP *********************************************************************
+2020-11-03 01:27:39,358 p=21765 u=vagrant |  127.0.0.1                  : ok=23   changed=19   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-11-03 01:27:41,233 p=22571 u=vagrant |  PLAY [localhost] ***************************************************************
+2020-11-03 01:27:41,252 p=22571 u=vagrant |  TASK [Gathering Facts] *********************************************************
+2020-11-03 01:27:42,345 p=22571 u=vagrant |  ok: [127.0.0.1]
+2020-11-03 01:27:42,373 p=22571 u=vagrant |  TASK [Copy CA certificate to elasticsearch directory] **************************
+2020-11-03 01:27:43,013 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:43,041 p=22571 u=vagrant |  TASK [Change Logstash's minimum memory usage to 512MB] *************************
+2020-11-03 01:27:43,368 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:43,394 p=22571 u=vagrant |  TASK [Change Logstash's maximum memory usage to 512MB] *************************
+2020-11-03 01:27:43,564 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:43,592 p=22571 u=vagrant |  TASK [Add the Logstash configuration which activates monitoring] ***************
+2020-11-03 01:27:43,981 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:44,013 p=22571 u=vagrant |  TASK [Add the Logstash input configuration for Beats] **************************
+2020-11-03 01:27:44,365 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:44,393 p=22571 u=vagrant |  TASK [Add the Logstash input configuration for Redis] **************************
+2020-11-03 01:27:44,710 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:44,736 p=22571 u=vagrant |  TASK [Add an empty Logstash filter configuration] ******************************
+2020-11-03 01:27:45,060 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:45,088 p=22571 u=vagrant |  TASK [Add the Logstash output configuration to Elasticsearch] ******************
+2020-11-03 01:27:45,411 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:45,440 p=22571 u=vagrant |  TASK [Change Elasticsearch output user password] *******************************
+2020-11-03 01:27:45,686 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:45,727 p=22571 u=vagrant |  TASK [Add logstash system user for monitoring] *********************************
+2020-11-03 01:27:45,944 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:45,974 p=22571 u=vagrant |  TASK [Add logstash system user for monitoring] *********************************
+2020-11-03 01:27:46,274 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:46,304 p=22571 u=vagrant |  TASK [Add CA cert for monitoring] **********************************************
+2020-11-03 01:27:46,570 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:46,613 p=22571 u=vagrant |  TASK [Create the pattern directory] ********************************************
+2020-11-03 01:27:47,057 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:47,082 p=22571 u=vagrant |  TASK [Add the nginx pattern, so we can use it for workshops later on] **********
+2020-11-03 01:27:47,421 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:47,448 p=22571 u=vagrant |  TASK [Start Logstash] **********************************************************
+2020-11-03 01:27:48,057 p=22571 u=vagrant |  changed: [127.0.0.1]
+2020-11-03 01:27:48,060 p=22571 u=vagrant |  PLAY RECAP *********************************************************************
+2020-11-03 01:27:48,060 p=22571 u=vagrant |  127.0.0.1                  : ok=16   changed=15   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
