@@ -4,6 +4,7 @@ This repository will install the [Elastic Stack](https://www.elastic.co/products
 
 ![Vagrant + VirtualBox](docs/images/vagrant-virtualbox.png)
 ![Ansible + ELK Stack](docs/images/ansible-elk.png)
+![Beats Suite](docs/images/beats-suite.png)
 
 ## Features
 
