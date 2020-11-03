@@ -49,7 +49,7 @@ $ java -jar /opt/injector.jar 100000 1000
 ## Logstash Parser
 
 -	The GROK Parser for _yum.log_ is located at `elastic-stack/templates/logstash/yum-filter.log`
--	Screenshots are found at `docs/*.png`
+-	Screenshots are found at `docs/images/*.png`
 
 
 # TASK
@@ -79,4 +79,4 @@ $ java -jar /opt/injector.jar 100000 1000
 
 * CSV Export of Visualization
 
-[YUM.log.csv](docs/files/YUM.log.csv) is based on 
+[YUM.log.csv](docs/files/YUM.log.csv) is based on [Yum Log](docs/files/yum.log)
