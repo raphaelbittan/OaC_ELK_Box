@@ -2,7 +2,8 @@
 
 This repository will install the [Elastic Stack](https://www.elastic.co/products) (Elasticsearch, Logstash, Kibana, and Beats) and optionally start a trial of commercial features. You can start from scratch and configure everything with [Vagrant and Ansible](#vagrant-and-ansible).
 
-![Ansible ELK Stack](docs/images/ansible-elk.png)
+![Vagrant + VirtualBox](docs/images/vagrant-virtualbox.png)
+![Ansible + ELK Stack](docs/images/ansible-elk.png)
 
 ## Features
 
