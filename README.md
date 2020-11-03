@@ -9,14 +9,14 @@ This repository will install the [Elastic Stack](https://www.elastic.co/products
 * Auditbeat `file_integrity` module on `/home/vagrant/` directory and `auditd` module
 * Heartbeat pinging nginx every 10s
 * Metricbeat `system`, `docker`, `elasticsearch`, `kibana`, `logstash`, `mongodb`, `nginx` and `redis` modules
-* Packetbeat sending its data via Redis + Logstash, monitoring flows, ICMP, DNS, HTTP (nginx and Kibana), Redis, and MongoDB (generate traffic with `$ mongo /elk-stack/mongodb.js`)
+* Packetbeat sending its data via Redis + Logstash, monitoring flows, ICMP, DNS, HTTP (nginx and Kibana), Redis, and MongoDB (generate traffic with `$ mongo /elastic-stack/mongodb.js`)
 * The pattern for nginx is already prepared in */opt/logstash/patterns/*
 
 ## Vagrant and Ansible
 
 Do a simple `vagrant up` by using [Vagrant](https://www.vagrantup.com)'s [Ansible provisioner](https://www.vagrantup.com/docs/provisioning/ansible.html). All you need is a working [Vagrant installation](https://www.vagrantup.com/docs/installation/) (2.2.4+ but the latest version is always recommended), a [provider](https://www.vagrantup.com/docs/providers/) (tested with the latest [VirtualBox](https://www.virtualbox.org) version), and 3GB of RAM.
 
-With the [Ansible playbooks](https://docs.ansible.com/ansible/playbooks.html) in the */elk-stack/* folder you can configure the whole system step by step. Just run them in the given order inside the Vagrant box:
+With the [Ansible playbooks](https://docs.ansible.com/ansible/playbooks.html) in the */elastic-stack/* folder you can configure the whole system step by step. Just run them in the given order inside the Vagrant box:
 
 ```sh
 > vagrant ssh
