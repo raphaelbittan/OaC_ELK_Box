@@ -10,7 +10,7 @@
   - name: Make Kibana available on all network interfaces
     lineinfile:
       path: /etc/kibana/kibana.yml
-      regexp: '^server.host'
+      regexp: '^server.host:'
       line: 'server.host: "0.0.0.0"'
 
   - name: Create the Kibana logging directory
@@ -19,7 +19,7 @@
   - name: Enable persistent Kibana logs
     lineinfile:
       path: /etc/kibana/kibana.yml
-      regexp: '^logging.dest'
+      regexp: '^logging.dest:'
       line: 'logging.dest: /var/log/kibana/kibana.log'
 
   - name: Creates configuration ca directory
@@ -59,61 +59,61 @@
   - name: Change Elasticsearch hosts
     lineinfile:
       path: /etc/kibana/kibana.yml
-      regexp: 'elasticsearch.hosts'
+      regexp: '^elasticsearch.hosts:'
       line: 'elasticsearch.hosts: ["https://127.0.0.1:9200"]'
 
   - name: Set Elasticsearch username 
     lineinfile:
       path: /etc/kibana/kibana.yml
-      regexp: 'elasticsearch.username'
+      regexp: '^elasticsearch.username:'
       line: 'elasticsearch.username: "kibana"'
 
   - name: Set Kibana user password 
     lineinfile:
       path: /etc/kibana/kibana.yml
-      regexp: 'elasticsearch.password'
+      regexp: '^elasticsearch.password:'
       line: 'elasticsearch.password: {{ kibana_user_password }}'
 
   - name: Enable SSL for Kibana server
     lineinfile:
       path: /etc/kibana/kibana.yml
-      regexp: 'server.ssl.enabled'
+      regexp: '^server.ssl.enabled:'
       line: 'server.ssl.enabled: true'
 
   - name: Set path to instance certificate for server
     lineinfile:
       path: /etc/kibana/kibana.yml
-      regexp: 'server.ssl.certificate'
+      regexp: '^server.ssl.certificate:'
       line: 'server.ssl.certificate: /etc/kibana/instance/instance.crt'
 
   - name: Set path to instance key for server
     lineinfile:
       path: /etc/kibana/kibana.yml
-      regexp: 'server.ssl.key'
+      regexp: '^server.ssl.key:'
       line: 'server.ssl.key: /etc/kibana/instance/instance.key'
 
   - name: Set path to instance certificate for elasticsearch
     lineinfile:
       path: /etc/kibana/kibana.yml
-      regexp: 'elasticsearch.ssl.certificate'
+      regexp: '^elasticsearch.ssl.certificate:'
       line: 'elasticsearch.ssl.certificate: /etc/kibana/instance/instance.crt'
 
   - name: Set path to instance key for elasticsearch
     lineinfile:
       path: /etc/kibana/kibana.yml
-      regexp: 'elasticsearch.ssl.key'
+      regexp: '^elasticsearch.ssl.key:'
       line: 'elasticsearch.ssl.key: /etc/kibana/instance/instance.key'
 
   - name: Set path to CA
     lineinfile:
       path: /etc/kibana/kibana.yml
-      regexp: 'elasticsearch.ssl.certificateAuthorities'
+      regexp: '^elasticsearch.ssl.certificateAuthorities:'
       line: 'elasticsearch.ssl.certificateAuthorities: /etc/kibana/ca/ca.crt'
 
   - name: Set certificate verification mode for elasticsearch
     lineinfile:
       path: /etc/kibana/kibana.yml
-      regexp: 'elasticsearch.ssl.verificationMode'
+      regexp: '^elasticsearch.ssl.verificationMode:'
       line: 'elasticsearch.ssl.verificationMode: certificate'
 
   - name: Start Kibana

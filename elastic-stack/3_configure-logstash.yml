@@ -60,21 +60,21 @@
   - name: Add logstash system user for monitoring
     lineinfile:
       path: /etc/logstash/logstash.yml
-      regexp: "xpack.monitoring.elasticsearch.username"
+      regexp: "^xpack.monitoring.elasticsearch.username:"
       line: "xpack.monitoring.elasticsearch.username: 'logstash_system'"
       state: present
 
   - name: Add logstash system user for monitoring
     lineinfile:
       path: /etc/logstash/logstash.yml
-      regexp: "xpack.monitoring.elasticsearch.password"
+      regexp: "^xpack.monitoring.elasticsearch.password:"
       line: "xpack.monitoring.elasticsearch.password: '{{ logstash_system_user_password }}'"
       state: present
 
   - name: Add CA cert for monitoring
     lineinfile:
       path: /etc/logstash/logstash.yml
-      regexp: "xpack.monitoring.elasticsearch.ssl.certificate_authority"
+      regexp: "^xpack.monitoring.elasticsearch.ssl.certificate_authority:"
       line: "xpack.monitoring.elasticsearch.ssl.certificate_authority: /etc/logstash/ca.crt"
       state: present
 

@@ -102,105 +102,105 @@
   - name: Do not swap
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "bootstrap.memory_lock"
+      regexp: "^bootstrap.memory_lock:"
       line: "bootstrap.memory_lock: true"
       state: present
 
   - name: We only have a single node, set minimum master nodes accordingly
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "discovery.zen.minimum_master_nodes"
+      regexp: "^discovery.zen.minimum_master_nodes:"
       line: "discovery.zen.minimum_master_nodes: 1"
       state: present
 
   - name: Require explicit names when deleting indices
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "action.destructive_requires_name"
+      regexp: "^action.destructive_requires_name:"
       line: "action.destructive_requires_name: true"
       state: present
 
   - name: Disable watermarks, since disk space might be tight on the 10GB base box
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "cluster.routing.allocation.disk.threshold_enabled"
+      regexp: "^cluster.routing.allocation.disk.threshold_enabled:"
       line:  "cluster.routing.allocation.disk.threshold_enabled: false"
       state: present
 
   - name: Enable monitoring of the Elastic Stack
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "xpack.monitoring.collection.enabled"
+      regexp: "^xpack.monitoring.collection.enabled:"
       line:  "xpack.monitoring.collection.enabled: true"
       state: present
 
   - name: Enable security for the Elastic Stack
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "xpack.security.enabled"
+      regexp: "^xpack.security.enabled:"
       line:  "xpack.security.enabled: true"
       state: present
 
   - name: Enable SSL for transport within the Elastic Stack
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "xpack.security.transport.ssl.enabled"
+      regexp: "^xpack.security.transport.ssl.enabled:"
       line:  "xpack.security.transport.ssl.enabled: true"
       state: present
 
   - name: Make transport SSL verification mode 'certificate' within the Elastic Stack
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "xpack.security.transport.ssl.verification_mode"
+      regexp: "^xpack.security.transport.ssl.verification_mode:"
       line:  "xpack.security.transport.ssl.verification_mode: certificate"
       state: present
 
   - name: Set path to transport ssl key within the Elastic Stack
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "xpack.security.transport.ssl.key"
+      regexp: "^xpack.security.transport.ssl.key:"
       line:  "xpack.security.transport.ssl.key: /etc/elasticsearch/instance/instance.key"
       state: present
 
   - name: Set path to transport ssl certificate within the Elastic Stack
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "xpack.security.transport.ssl.certificate"
+      regexp: "^xpack.security.transport.ssl.certificate:"
       line:  "xpack.security.transport.ssl.certificate: /etc/elasticsearch/instance/instance.crt"
       state: present
 
   - name: Set path to transport ssl CA certificate within the Elastic Stack
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "xpack.security.transport.ssl.certificate_authorities"
+      regexp: "^xpack.security.transport.ssl.certificate_authorities:"
       line:  "xpack.security.transport.ssl.certificate_authorities: [ '/etc/elasticsearch/ca/ca.crt' ]"
       state: present
 
   - name: Enable SSL for HTTP for the Elastic Stack
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "xpack.security.http.ssl.enabled"
+      regexp: "^xpack.security.http.ssl.enabled:"
       line:  "xpack.security.http.ssl.enabled: true"
       state: present
 
   - name: Set path to HTTP ssl key within the Elastic Stack
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "xpack.security.http.ssl.key"
+      regexp: "^xpack.security.http.ssl.key:"
       line:  "xpack.security.http.ssl.key:  /etc/elasticsearch/instance/instance.key"
       state: present
 
   - name: Set path to HTTP ssl certificate within the Elastic Stack
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "xpack.security.http.ssl.certificate"
+      regexp: "^xpack.security.http.ssl.certificate:"
       line:  "xpack.security.http.ssl.certificate: /etc/elasticsearch/instance/instance.crt"
       state: present
 
   - name: Set path to HTTP ssl CA certificate within the Elastic Stack
     lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
-      regexp: "xpack.security.http.ssl.certificate_authorities"
+      regexp: "^xpack.security.http.ssl.certificate_authorities:"
       line:  "xpack.security.http.ssl.certificate_authorities: [ '/etc/elasticsearch/ca/ca.crt' ]"
       state: present
 
